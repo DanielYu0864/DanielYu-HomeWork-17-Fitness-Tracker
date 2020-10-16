@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 // create new document in mongod
 const workoutSchema = new Schema({
+  // set exercises as array
   exercises: [
     {
       type: {
