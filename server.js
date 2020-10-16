@@ -14,10 +14,11 @@ app.use(express.static('public'));
 require('./routes/apiRoute')(app);
 require('./routes/htmlRoute')(app);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
-  useFindAndModify: true
+  useFindAndModify: false
 });
+
 
 // listener
 app.listen(PORT, () => {
