@@ -3,24 +3,7 @@ const Schema = mongoose.Schema;
 // create new document in mongod
 const workoutSchema = new Schema({
   // set exercises as array
-  exercises: [
-    {
-      type: {
-        type: String,
-        trim: true,
-        required: "Enter an exercise type"
-      },
-      name: {
-        type: String,
-        trim: true,
-        required: "Enter an exercise type"
-      },
-      duration: Number,
-      weight: Number,
-      reps: Number,
-      sets: Number
-    }
-  ],
+  exercises: { type: Array },
   day: { type: Date, default: Date.now }
 });
 // Set virtuals to true to create dynamically-created property
